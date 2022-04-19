@@ -1,8 +1,22 @@
 const http = require('http')
 const port = process.env.PORT || 3000
 
-const server = http.createServer( function (req, res) {
-    res.writeHead(200, {'Content-Type' : 'text/plain'})
-    res.write('Hello World!')
-    res.end()
-}).listen(port)
+function server_callback(req, res) {
+    switch(req.url) {
+        case '/about':
+            res.end("The about page")
+            break
+        case '/contact':
+            res.end("The contact page")
+            break
+        case '/' :
+            res.end("The home page")
+            break
+        default:
+            res.writeHead(404)
+            res.end("Page not found")
+    }
+}
+
+const server = http.createServer(server_callback)
+server.listen(port)
