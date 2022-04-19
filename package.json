@@ -1,5 +1,12 @@
 {
+  "name": "learnjs",
+  "version": "0.0.1",
+  "description": "package for Brahm to learn javascript, node and webdev in general",
+  "main": "main.js",
+  "author": "Brahm Prakash Mishra",
+  "license": "ISC",
   "dependencies": {
+    "express": "^4.17.3",
     "init": "^0.1.2",
     "npm": "^8.7.0"
   },
