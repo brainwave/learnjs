@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "init": "^0.1.2",
+    "npm": "^8.7.0",
+    "underscore": "^1.13.2"
+  },
+  "scripts": {
+    "build": "babel src/main.js -d dist",
+    "start": "npm run build && nodemon dist/main.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "eslint": "^8.13.0",
+    "eslint-config-google": "^0.14.0",
+    "nodemon": "^2.0.15"
+  }
+}
